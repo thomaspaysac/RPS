@@ -4,13 +4,41 @@ let playerChoice
 let playerSelection
 let playerScore = 0
 let computerScore = 0
-let roundNumber
 
-function playRound() { // Complete round, using functions defined later
+
+game()
+
+
+
+function game() {
+    for (let i=0; i<5; i++){ // loop the game for 5 rounds, displaying scores at the end
+        playRound()
+    }
+    console.log('That was a tough fight!');
+    if (playerScore > computerScore) { // comparing scores, declaring a winner and returning both scores
+        console.log(`Congratulations, you won! ${playerScore} points against ${computerScore} points.`)
+    } else if (computerScore > playerScore) {
+        console.log(`Too bad, you lost this time... ${playerScore} points against ${computerScore} points.`)
+    } else if (playerScore == computerScore) {
+        console.log(`Unbelievable! You both score ${playerScore} points.`)
+    }
+    let replay = prompt('Do you want to play again?', 'Yes / No').toLowerCase();
+    if (replay == 'yes'){
+    game();
+    } else {
+        console.log('Goodbye')
+    }
+    }
+
+
+// Complete round, using functions defined later
+function playRound() { 
 getComputerChoice()
 getPlayerChoice()
 battle()
 }
+
+
 
 // OK! randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. Store result in computerSelection
 function getComputerChoice() { 
@@ -43,7 +71,7 @@ function getPlayerChoice() {
 }
 }
 
-// compare computerSelection and playerSelection
+// OK! compare computerSelection and playerSelection, add scoring
 function battle(){
     if (computerSelection == 'rock'){ // computer chose rock
     switch(playerSelection){
@@ -93,4 +121,3 @@ function battle(){
 
 
 
-// count rounds to a maximum of 5: function game(playRound()), loop for 5 games, returns final score at the end
