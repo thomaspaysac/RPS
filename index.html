@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-    <script type="text/javascript" src="./script.js"></script>
+<header>
+    <h1 class="title">Spells Battle</h1>
+</header>
+
+<main>
+    <div class="weapon-choices">
+        <div class="weapon-choices__title">Choose your spell :</div>
+        <div class="weapon-choices__options">
+            <button class="weapon-choice" id="fire"></button>
+            <button class="weapon-choice" id="earth"></button>
+            <button class="weapon-choice" id="water"></button>
+        </div>
+    </div>
+    <div class="results-box">
+        <div class="results-box__title">~ Battle Log ~</div>
+        <div class="player-selection">Reminder:<br> Fire beats earth, earth beats water, water beats fire.</div>
+        <div class="computer-selection"></div>
+        <div class="commentary"></div>
+        <div class="game-results"></div>
+        <div class="final-result"></div>
+        <button class="restart-button">Try again</button>
+    </div>
+</main>
+
+<footer>
+    Coded by stagnant-sys
+</footer>
 </body>
 </html>

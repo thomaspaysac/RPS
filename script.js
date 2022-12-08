@@ -6,9 +6,7 @@ let playerScore = 0
 let computerScore = 0
 
 
-game()
-
-
+/*game()
 
 function game() {
     for (let i=0; i<5; i++){ // loop the game for 5 rounds, displaying scores at the end
@@ -28,7 +26,7 @@ function game() {
     } else {
         console.log('Goodbye')
     }
-    }
+    }*/
 
 
 // Complete round, using functions defined later
